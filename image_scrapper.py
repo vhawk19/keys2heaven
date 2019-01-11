@@ -1,11 +1,7 @@
 from google_images_download import google_images_download
 import os
 import sys
-
-try:
-    keyword=sys.argv[1]
-except:
-    keyword="peters key"
+keyword=input()
 response = google_images_download.googleimagesdownload()
 arguments = {
   "keywords": keyword,
