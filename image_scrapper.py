@@ -1,10 +1,16 @@
 from google_images_download import google_images_download
+import os
+import sys
+
+try:
+    keyword=sys.argv[1]
+except:
+    keyword="peters key"
 response = google_images_download.googleimagesdownload()
 arguments = {
-  "keywords": "Peters two keys",
+  "keywords": keyword,
   "limit": 100,
   "print_urls": True,
-  "usage_rights": "labeled-for-reuse",
   "output_directory": "img",
   "extract-metadata":True,
 }
